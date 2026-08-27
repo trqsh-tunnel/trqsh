@@ -5,7 +5,7 @@
 # Static, CGO-free, distroless/static:nonroot. Listens on :8080 (/healthz).
 
 # --- build ---
-FROM golang:1.26-alpine AS build
+FROM golang:1.27-alpine AS build
 ENV CGO_ENABLED=0 GOTOOLCHAIN=local GOFLAGS=-trimpath
 WORKDIR /src
 

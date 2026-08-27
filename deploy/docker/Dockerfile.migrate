@@ -9,7 +9,7 @@
 # Helm hook Job so schema is applied before the API starts.
 
 # --- build goose ---
-FROM golang:1.26-alpine AS build
+FROM golang:1.27-alpine AS build
 ENV CGO_ENABLED=0 GOTOOLCHAIN=local
 RUN go install github.com/pressly/goose/v3/cmd/goose@v3.24.1
 
