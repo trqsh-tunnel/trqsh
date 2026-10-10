@@ -6,7 +6,7 @@
 # over QUIC (:4443/udp) + TCP fallback (:4443/tcp); metrics/health on :9090.
 
 # --- build ---
-FROM golang:1.26-alpine AS build
+FROM golang:1.27-alpine AS build
 ENV CGO_ENABLED=0 GOTOOLCHAIN=local GOFLAGS=-trimpath
 WORKDIR /src
 
